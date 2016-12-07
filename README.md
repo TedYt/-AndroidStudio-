@@ -36,3 +36,10 @@ targetSdkVersion 17
 ###JNI ERROR (app bug): accessed stale weak global reference 0xa71acllf (index 45127 in ...)
 
 出错的原因可能是函数返回值不对应。比如C++里方法的返回值jint，但是java里的却写成了string
+
+
+###新建project或者module，生成build.gradle的模版文件的路径
+<Android studio>/plugins/android/lib/templates/gradle-projects/NewAndroidModule
+
+###工程顶层的build.gradle 和 settings.gradle等一些文件的模版文件的路径
+<Android studio>/plugins/android/lib/templates/gradle-projects/NewAndroidProject
