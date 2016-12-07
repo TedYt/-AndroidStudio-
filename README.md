@@ -43,3 +43,19 @@ targetSdkVersion 17
 
 ###工程顶层的build.gradle 和 settings.gradle等一些文件的模版文件的路径
 <Android studio>/plugins/android/lib/templates/gradle-projects/NewAndroidProject
+
+
+###aar包的使用
+1、将aar包放在在module根目录下的libs目录（例如app/libs）中
+2、在module的build.gradle加上下面的内容：
+```java
+dependecies {
+  compile (name:'aar包名不带aar扩展名', ext:'aar')
+}
+
+repositories {
+   flatDir(){
+      dir 'libs'
+   }
+}
+```java
