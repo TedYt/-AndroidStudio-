@@ -47,6 +47,7 @@ targetSdkVersion 17
 
 ###aar包的使用
 1、将aar包放在在module根目录下的libs目录（例如app/libs）中
+
 2、在module的build.gradle加上下面的内容：
 ```java
 dependecies {
