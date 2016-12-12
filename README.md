@@ -60,3 +60,21 @@ repositories {
    }
 }
 ```
+
+###配置JNI代码
+由NDK编译转Cmake编译时，注意CPPFlags的添加：
+Android.mk中有一个LOCAL_CPPFLAGS，对应Cmake中的配置为：
+在build.gradle中增加如下代码：
+```java
+android{
+    ...
+    defaultConfig {
+    ...
+       externalNativeBuild{
+          cmake {
+               cppFlags "-ftti -fexceptions -D_UNICODE ..."
+          }
+       }
+    }
+}
+```
