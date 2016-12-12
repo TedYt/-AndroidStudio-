@@ -78,3 +78,40 @@ android{
     }
 }
 ```
+
+###显性Intent
+关键一点就是看在新建对象时，有没有指定ComponenteName属性，因为这个属性明确的指出了调用的类名，例如：
+1.
+```java
+Intent mIntent = new Intent(IntentActivity.this, TestActivity.class);
+```
+2.
+```java
+ComponentName componentName = new ComponentName(IntentActivity.this, TestActivity.class);
+Intent intent = new Intent();
+intent.setComponent(componentName);
+```
+3.
+```java
+ComponentName componentName = new ComponentName("com.test.demo", "com.test.demo.MainActivity");
+Intent intent = new Intent();
+intent.setComponent(componentName);
+```
+上面三种形式是等价的，都明确指出了要调用的类
+
+###隐性Intent
+关键是要在manifest文件中的定义：
+```html
+<activity android:name=".activity.TestActivity">
+    <intent-filter>
+        <action android:name="jackaltsc.intent.action.test"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+    </intent-filter>
+</activity>
+```
+
+```java
+Intent intent = new Intent();
+intent.setAction("jackaltsc.intent.action.test");
+startActivity(intent);
+```
