@@ -119,3 +119,9 @@ startActivity(intent);
 ###AppCompat_v7包
 这个包的作用是让Android2.1以上都能使用Android4.0版本的界面的支持库
 所以在最小sdk版本为4.0以上时，就可以不加这个库。
+
+###AndroidManifest.xml 
+如果一个app依赖了多个Android libray（Andriod library才有manifest文件），编译时会将所有的manifest合并成一个，可以验证文件：
+```java
+app/build/manifests/full/debug/AndroidManifest.xml
+```
