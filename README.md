@@ -125,3 +125,12 @@ startActivity(intent);
 ```java
 app/build/manifests/full/debug/AndroidManifest.xml
 ```
+###调用lib中Activity的情况
+-AS：AS会自动把lib的AndroidManifest文件合并到主app的Manifest文件中
+-Eclipse：Eclipse需要自己手动把lib中的Manifest文件中的权限和组件（Activity，service等）拷贝到主app中的Manifest文件中，
+ 注意类名要带上lib中package的包名，如下：
+```html
+ <activity android:name="com.lib.main.MainActivty"
+   android:theme="...">
+ </activity>
+```
