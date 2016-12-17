@@ -135,3 +135,5 @@ Eclipse：Eclipse需要自己手动把lib中的Manifest文件中的权限和组�
    android:theme="...">
  </activity>
 ```
+####jcenter的地址
+http://jcenter.bintray.com
