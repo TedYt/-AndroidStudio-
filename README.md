@@ -140,6 +140,12 @@ http://jcenter.bintray.com
 
 
 ####Error:(14, 9) Execution failed for task ':app:processDebugManifest'. 
+完整错误如下：
+Error:(14, 9) Execution failed for task ':app:processDebugManifest'.
+> Manifest merger failed : Attribute application@icon value=(@drawable/ic_launcher) from AndroidManifest.xml:14:9
+is also present at MyApplication:library:unspecified:18:9 value=(@drawable/icon)
+Suggestion: add 'tools:replace="android:icon"' to <application> element at AndroidManifest.xml:12:5 to override
+
 解决方法，在app的AndroidManifest.xml中做如下修改:
 ```html
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
