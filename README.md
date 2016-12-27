@@ -137,3 +137,31 @@ Eclipse：Eclipse需要自己手动把lib中的Manifest文件中的权限和组�
 ```
 ####jcenter的地址
 http://jcenter.bintray.com
+
+
+####Error:(14, 9) Execution failed for task ':app:processDebugManifest'. 
+解决方法，在app的AndroidManifest.xml中做如下修改:
+```html
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.leo.kang.demo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+ </manifest>
+```html
+注意两个地方：
+
+1. 在manifest节点加上：xmlns:tools="http://schemas.android.com/tools"
+
+2. 在application 节点加上：tools:replace="android:icon, android:theme"
