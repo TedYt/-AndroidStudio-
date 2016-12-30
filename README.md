@@ -171,3 +171,7 @@ Suggestion: add 'tools:replace="android:icon"' to <application> element at Andro
 1. 在manifest节点加上：xmlns:tools="http://schemas.android.com/tools"
 
 2. 在application 节点加上：tools:replace="android:icon, android:theme"
+
+
+####CMake中文版
+http://www.cnblogs.com/coderfenghc/archive/2012/06/16/CMake_ch_01.html
