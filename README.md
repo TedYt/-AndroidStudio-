@@ -165,7 +165,7 @@ Suggestion: add 'tools:replace="android:icon"' to <application> element at Andro
         android:theme="@style/AppTheme"
         tools:replace="android:icon, android:theme">
  </manifest>
-```html
+```
 注意两个地方：
 
 1. 在manifest节点加上：xmlns:tools="http://schemas.android.com/tools"
