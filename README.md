@@ -177,5 +177,6 @@ Suggestion: add 'tools:replace="android:icon"' to <application> element at Andro
 
 http://www.cnblogs.com/coderfenghc/archive/2012/06/16/CMake_ch_01.html
 ####Gradle's dependency cache may be corrupt解决方法 
-1、删除.grad目录
+1、删除.grad目录 
+
 2、上面方法不行的话，修改gradle-wrapper.properties里的gradle的版本
